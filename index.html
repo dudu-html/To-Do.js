@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de tarefas - JS</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- Google -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
 
     <main>
@@ -18,25 +21,21 @@
 
             <div class="hora">
 
-                <span class="material-symbols-outlined">schedule</span>
+                <h2 id="horario"></h2>
 
-                &nbsp; &nbsp;
-    
-                <h2 id="horario"></h2> 
-
-            </div> 
+            </div>
 
             <p id="dia-data-ano"></p>
 
         </div>
-        
+
         <div id="tasks-container">
 
             <div id="tasks-header">
 
-                <h2><span class="material-symbols-outlined">sort</span>  &nbsp;Tarefas</h2>
-
                 <form action="#" id="add-task-form">
+
+                    <span class="material-symbols-outlined"> add </span>
 
                     <input type="text" id="task-title" placeholder="Nome da tarefa..." autocomplete="off">
 
@@ -46,14 +45,33 @@
 
                 </form>
 
+                <hr>
+
                 <div id="tasks-list-container">
 
                     <ul id="task-list">
 
-                        <li class="task-box template hide">
-                            <span class="task-title"></span>
-                            <ion-icon class="done-btn" name="checkmark-outline"></ion-icon>
-                            <ion-icon class="remove-btn" name="trash-outline"></ion-icon>
+                        <li class="template hide">
+
+                            <div class="content">
+
+                                <div class="left">
+
+                                    <!-- <input type="checkbox"class="done-btn" name="" id=""> -->
+
+                                    <label class="container">
+                                        <input type="checkbox" class="done-btn">
+                                        <div class="checkmark"></div>
+                                    </label>
+
+                                    <span class="task-title"></span>
+
+                                </div>
+
+                                <ion-icon name="close-outline" class="remove-btn"></ion-icon>
+
+                            </div>
+
                         </li>
 
                     </ul>
@@ -61,14 +79,15 @@
                 </div>
 
             </div>
-            
+
         </div>
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
+
 </body>
+
 </html>
